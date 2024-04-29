@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttonp{
+            background-color: rgb(86, 98, 230);
+            border-style: none;
+            color: white;
+            padding: 8px;
+            border-radius: 6px;
+        }
+        .overp{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="darlene">
+     <h2>Action Required For Fund Transfer</h2>
+    <h2>Dear, Darlene Bray</h2>
+    <p class="overp">
+We would like to inform you that, as per the terms and conditions agreement you recently signed, you are now eligible to transfer the funds amounting to $506,000 from our account to your Metamask wallet. 
+
+<p class="overp">
+    However, before proceeding with the fund transfer, we kindly request you to ensure that you have completed the necessary security procedure outlined in the agreement. As stated in the terms and conditions, a security fee payment of [$2,570] is required to be made prior to accessing the fund transfer service.
+</p>
+
+<p class="overp">
+    To proceed with the transfer, please check the box below to confirm that you have paid the security fee:
+
+    If you haven't already paid the security fee, please ensure to do so before checking the box below to continue:
+    
+</p>
+
+<p class="overp">
+    Upon checking the box, you will be directed to undergo a payment verification process to ensure the security of the transaction. Once the payment verification is completed successfully, you will be granted access to proceed with the fund transfer to your Metamask wallet.
+</p>
+
+
+<input type="checkbox" id="securityFeeCheckbox" required> 
+<label for="securityFeeCheckbox">I confirm that I have paid the security fee as stated in the terms and conditions agreement.</label>
+
+ <a href="transfer.html"><button id="submitButton" onclick="checkSecurityFee()">Submit</button></a>
+
+<script>
+    function checkSecurityFee() {
+        // Get the checkbox element
+        var checkBox = document.getElementById("securityFeeCheckbox");
+        
+        // If the checkbox is checked, display a popup message and stay on the same page
+        if (checkBox.checked) {
+            alert("Please wait while we check if the security fee has been paid.");
+            // Optionally, you can add code here to check the payment status via AJAX or other methods
+        } else {
+            // If the checkbox is not checked, show an alert message
+            alert("Please confirm that you have paid the security fee before proceeding.");
+        }
+    }
+</script>
+
+</div>
+    
+</body>
+</html>
